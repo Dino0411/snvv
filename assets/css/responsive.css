@@ -1,0 +1,42 @@
+/* ! tablet */
+@media (min-width: 739px) and (max-width: 1023px) {
+  .form--sn .form__text {
+    font-size: 80px;
+  }
+  .form--sn .form__btn {
+    width: 340px;
+    height: 120px;
+  }
+  .form--part1 .form__text--part1 {
+    font-size: 80px;
+    left: 50%;
+  }
+  .form--part1 .form__btn--part1 {
+    left: 50%;
+  }
+}
+
+/* ! Phone */
+@media (max-width: 740px) {
+  .form--sn .form__text {
+    font-size: 45px;
+  }
+  .form--sn .form__btn {
+    width: 250px;
+    height: 80px;
+  }
+  .form--part1 .form__img--part1 {
+    width: 80%;
+  }
+  .form--part1 .form__text--part1 {
+    font-size: 40px;
+    left: 40%;
+    top: 5%;
+  }
+  .form--part1 .form__btn--part1 {
+    top: 25%;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+  }
+}
