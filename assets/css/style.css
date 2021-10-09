@@ -5,9 +5,10 @@
 }
 html {
   font-family: "Pacifico", cursive;
+  scroll-behavior: smooth;
 }
 .form--sn {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-image: linear-gradient(to bottom, #f8edeb, #fae1dd);
   display: flex;
@@ -44,6 +45,10 @@ html {
   -webkit-background-clip: text;
 }
 .form__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   width: 300px;
   height: 100px;
   border-radius: 25px;
@@ -61,18 +66,9 @@ html {
   background: none;
 }
 .form--part1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.97);
-  overflow: hidden;
-  display: none;
-  animation: part1 linear 0.5s;
-}
-.form--part1.open {
-  display: block;
+  position: relative;
+  height: 100vh;
+  background: #333;
 }
 .form--part1 .form__img--part1 {
   position: absolute;
@@ -101,42 +97,181 @@ html {
   background: #fae1dd;
   color: #ff0000;
   cursor: pointer;
-  z-index: 2;
-  /* animation: xoayvong linear 3s infinite; */
 }
 
-@keyframes part1 {
+.form--part2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(250, 225, 221, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.form--part2.open {
+  display: flex;
+}
+.form--part2 .vid1 {
+  border-radius: 5px;
+  border: 2px solid #fff;
+  animation-delay: 2s;
+}
+.form--part2 .vid2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.form--part2 > i {
+  position: absolute;
+  font-size: 70px;
+  background-image: linear-gradient(
+    to bottom,
+    #ffbe0b,
+    #fb5607,
+    #ff006e,
+    #8338ec,
+    #3a86ff
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.form--part2 > i:first-of-type {
+  bottom: 0;
+  animation: sao linear 4s infinite;
+}
+.form--part2 > i:nth-of-type(2) {
+  left: 25%;
+  bottom: 15%;
+  animation: sao linear 2s infinite;
+}
+.form--part2 > i:nth-of-type(3) {
+  right: 30%;
+  bottom: 20%;
+  animation: sao linear 3s infinite;
+}
+.form--part2 > i:nth-of-type(4) {
+  left: 30%;
+  bottom: 40%;
+  animation: sao linear 2s infinite;
+}
+.form--part2 > i:nth-of-type(5) {
+  right: 30%;
+  top: 5%;
+  animation: sao linear 4s infinite;
+}
+.form--part2 > i:nth-of-type(6) {
+  left: 30%;
+  top: 20%;
+  animation: sao linear 3s infinite;
+}
+.form--part2 > i:nth-of-type(7) {
+  right: 20%;
+  bottom: 40%;
+  animation: sao linear 4s infinite;
+}
+.form--part2 > i:nth-of-type(8) {
+  right: 10%;
+  top: 10%;
+  animation: sao linear 3s infinite;
+}
+.form--part2 > i:nth-of-type(9) {
+  right: 5%;
+  animation: sao linear 2s infinite;
+  top: 30%;
+}
+.form--part2 > i:nth-of-type(10) {
+  animation: sao linear 3s infinite;
+  top: 35%;
+  right: 30%;
+}
+.form--part2 > i:nth-of-type(11) {
+  bottom: 0;
+  animation: sao linear 4s infinite;
+  right: 25%;
+}
+.form--part2 > i:nth-of-type(12) {
+  animation: sao linear 2s infinite;
+  bottom: 0;
+  left: 15%;
+}
+.form--part2 > i:nth-of-type(13) {
+  top: 5%;
+  animation: sao linear 4s infinite;
+  left: 5%;
+}
+.form--part2 > i:nth-of-type(14) {
+  top: 50%;
+  animation: sao linear 2s infinite;
+  left: 7%;
+}
+.form--part2 > i:nth-of-type(15) {
+  top: 60%;
+  animation: sao linear 3s infinite;
+  left: 20%;
+}
+.form--part2 .form__img--part2 {
+  position: absolute;
+  font-size: 50px;
+}
+.form--part2 .form__img--part2:first-of-type {
+  bottom: 0;
+  right: 7%;
+  width: 9%;
+  animation: xoayvong linear 2s infinite;
+}
+.form--part2 .form__img--part2:nth-of-type(2) {
+  top: 5%;
+  width: 9%;
+  animation: xoayvong linear 2s infinite;
+  left: 12%;
+}
+.form--part2 .form__img--part2:nth-of-type(3) {
+  top: 5%;
+  right: 12%;
+  animation: xoayvong linear 2s infinite;
+  width: 12%;
+}
+.form--part2 .form__img--part2:nth-of-type(4) {
+  bottom: 0;
+  left: 0;
+  width: 20%;
+}
+@keyframes sao {
   0% {
-    bottom: 100%;
+    opacity: 0;
   }
   25% {
-    bottom: 75%;
+    opacity: 0.5;
   }
   50% {
-    bottom: 50%;
+    opacity: 1;
   }
   75% {
-    bottom: 25%;
+    opacity: 0.5;
   }
   100% {
-    bottom: 0;
+    opacity: 0;
   }
 }
 
-/* @keyframes xoayvong {
+@keyframes xoayvong {
   0% {
     transform: rotate(0deg);
   }
   25% {
-    transform: rotate(-20deg);
+    transform: rotate(-10deg);
   }
   50% {
     transform: rotate(0deg);
   }
   75% {
-    transform: rotate(20deg);
+    transform: rotate(10deg);
   }
   100% {
     transform: rotate(0deg);
   }
-} */
+}

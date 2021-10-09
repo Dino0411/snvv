@@ -19,24 +19,48 @@
 /* ! Phone */
 @media (max-width: 740px) {
   .form--sn .form__text {
-    font-size: 45px;
+    font-size: 40px;
   }
   .form--sn .form__btn {
     width: 250px;
     height: 80px;
   }
+  .form--part1 {
+    animation: part1 linear 1s;
+  }
   .form--part1 .form__img--part1 {
-    width: 80%;
+    width: 70%;
   }
   .form--part1 .form__text--part1 {
-    font-size: 40px;
+    font-size: 35px;
     left: 40%;
     top: 5%;
   }
   .form--part1 .form__btn--part1 {
     top: 25%;
-    width: 200px;
+    width: 180px;
     height: 60px;
     font-size: 20px;
+  }
+  .form--part2 .vid1 {
+    display: none;
+  }
+  .form--part2 .vid2 {
+    display: block;
+  }
+  .form--part2 .form__img--part2:first-child {
+    display: none;
+  }
+  .form--part2 .form__img--part2:nth-child(2) {
+    display: none;
+  }
+  .form--part2 .form__img--part2:nth-child(5) {
+    display: none;
+  }
+  .form--part2 .form__img--part2:nth-child(6) {
+    display: none;
+  }
+  .form--part2 > i {
+    display: none;
   }
 }
