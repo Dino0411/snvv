@@ -1,16 +1,16 @@
-const start = document.querySelector(".js-btn-start");
-const part1 = document.querySelector(".js-part1");
-const btnPart1 = document.querySelector(".js-btn-part1");
+const start = document.querySelector(".js-btn-star");
+const part2 = document.querySelector(".js-part2");
+const vid = document.querySelector(".js-vid");
 
-function showPart1() {
-  part1.classList.add("open");
+function showPart2() {
+  part2.classList.add("open");
 }
-function hidePart1() {
-  part1.classList.remove("open");
+function hidePart2() {
+  part2.classList.remove("open");
 }
-
-start.addEventListener("click", showPart1);
-part1.addEventListener("click", hidePart1);
-btnPart1.addEventListener("click", function (event) {
+vid.addEventListener("click", function (event) {
   event.stopPropagation();
 });
+
+start.addEventListener("click", showPart2);
+part2.addEventListener("click", hidePart2);
